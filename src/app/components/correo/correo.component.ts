@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Mail} from '../../interfaces/mail';
 
 @Component({
   selector: 'app-correo',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./correo.component.scss']
 })
 export class CorreoComponent implements OnInit {
-  mail: any;
+  mail: Mail;
   constructor() {
     this.mail = {
       title: 'Lorem ipsum.',
@@ -17,7 +18,7 @@ export class CorreoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(typeof this.mail);
+    console.log(this.mail);
   }
 
 }

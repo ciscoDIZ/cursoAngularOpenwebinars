@@ -1,0 +1,31 @@
+<table>
+  <tr>
+    <th>Leído</th>
+    <th>Emisor</th>
+    <th>Título</th>
+  </tr>
+  <ng-container *ngFor="let mail of mails; index as i">
+    <tr>
+      <td>
+        <label>
+          <input type="radio" name="leido-{{i}}" [(ngModel)]="mail.read" [value]="true" disabled> Leído
+        </label>
+        <label>
+          <input type="radio" name="leido-{{i}}" [(ngModel)]="mail.read" [value]="false" disabled> No leído
+        </label>
+      </td>
+      <td>{{mail.sender}}</td>
+      <td>{{mail.title}}</td>
+      <td>
+        <button (click)="onAnswer(mail)">Responder</button>
+      </td>
+    </tr>
+    <tr *ngIf="mail.isAnswer">
+      <app-new-mail [mail]="mail" (action)="quickAnswerAction(mail)"></app-new-mail>
+    </tr>
+  </ng-container>
+</table>
+
+<!--<h1>Estado correo 1</h1>
+<p *ngIf="mails[0].read; else notRead">Si</p>
+<ng-template #notRead>No</ng-template>-->

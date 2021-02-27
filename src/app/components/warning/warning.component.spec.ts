@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListaCorreoComponent } from './lista-correo.component';
+import { WarningComponent } from './warning.component';
 
-describe('ListaCorreoComponent', () => {
-  let component: ListaCorreoComponent;
-  let fixture: ComponentFixture<ListaCorreoComponent>;
+describe('WarningComponent', () => {
+  let component: WarningComponent;
+  let fixture: ComponentFixture<WarningComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListaCorreoComponent ]
+      declarations: [ WarningComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListaCorreoComponent);
+    fixture = TestBed.createComponent(WarningComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
